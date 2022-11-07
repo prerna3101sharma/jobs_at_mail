@@ -1,0 +1,148 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block body %}
+<div class="row m-2 mt-5">
+<div class="col-sm-12">
+<div class="row">
+    <div class="col-sm-12 text-center">
+<h1 style="text-shadow: 0 0 3px #FF0000, 0 0 5px yellow;">What we offer?</h1>
+        <hr class="border border-danger border-2 opacity-50">
+    </div>
+</div>
+<div class="row pt-4">
+    <div class="col-sm-4 align-center">
+        <div class="card card1 m-2 shadow  border border-2 border-secondary" style="height: 300px;">
+            <img src="{% static 'images/cardimages/image3.jpg' %}" class="card-img-top">
+            <div class="card-body">
+                 <p class="card-text">Job Seeker can create resume, upload resume, view jobs, search jobs and apply for job.</p>
+            </div>
+        </div>
+    </div>
+    <div class="col-sm-4">
+        <div class="card shadow border border-2 border-secondary m-2 card1" style="height: 300px;">
+  <img src="{% static 'images/cardimages/image4.jpg' %}" class="card-img-top">
+  <div class="card-body">
+    <p class="card-text">Recruiter can post jobs, view resume, featured jobs. Here, you can hire the best person according to your requirement.</p>
+  </div>
+</div>
+    </div>
+    <div class="col-sm-4">
+        <div class="card shadow border border-2 border-secondary m-2 card1" style="height: 300px;;">
+  <img src="{% static 'images/cardimages/section4.jpg' %}" height="40%" class="card-img-top">
+  <div class="card-body">
+    <p class="card-text">JAM can update, delete or manage the old job details, reply to feedback, reply to quaries, add job details.</p>
+  </div>
+</div>
+
+    </div>
+</div>
+</div>
+</div>
+{% endblock body %}
+
+{% block add %}
+<h1 class="text-center m-5 textshadow">JAM Services for Job Seeker<hr class="border border-warning border-2 opacity-50" align="center" /></h1>
+<div class="row p-0" style="box-sizing: border-box; border-radius: 20px; background-image: linear-gradient(to bottom right, #ccffff, #ffe6f2);">
+    <div class="col-sm-5 p-3" style="box-sizing: border-box;">
+        <img src="{% static 'images/cardimages/image1.jpg' %}" width="100%" class="shadow border border-3 border-secondary" style="border-radius: 5%;"/>
+    </div>
+    <div class="col-sm-7 p-4">
+        <h1 class="hAnimationClass">Find the most exciting startup jobs</h1><br/>
+        <h4 class="homeText">Register Yourself</h4>
+        <h4 class="homeText">Create Profile</h4>
+        <h4 class="homeText">Upload CV</h4>
+        <h4 class="homeText">Get hired by trusted Companies!!!</h4>
+    </div>
+</div>
+<div class="row p-0 mt-2">
+    <div class="col-sm-12">
+       <div class="row row-cols-1 row-cols-md-3 g-4">
+  <div class="col">
+    <div class="card h-100 m-3 border border-2 border-secondary card2">
+      <img src="{% static 'images/cardimages/js3.jpeg' %}" class="card-img-top" />
+      <div class="card-body">
+        <h5 class="card-title">Register On JAM</h5>
+        <p class="card-text">Register and Create Your Profile on JAM and get mail of the job related to your profile.</p>
+                      <a href="{% url 'jobseekerreg' %}">Click here to Register</a>
+
+      </div>
+    </div>
+  </div>
+  <div class="col">
+    <div class="card h-100 m-3 border border-2 border-secondary card2">
+      <img src="{% static 'images/cardimages/image3.jpg' %}" class="card-img-top" height="55%"/>
+      <div class="card-body">
+        <h5 class="card-title">Upload Resume</h5>
+        <p class="card-text">Upload Your Resume for the job you are want to apply for. <br/> You can also create your resume here. <a href="#">Click Here</a></p>
+      </div>
+    </div>
+  </div>
+  <div class="col">
+    <div class="card h-100 m-3 border border-2 border-secondary card2">
+      <img src="{% static 'images/cardimages/js4.jpg' %}" height="55%" class="card-img-top"/>
+      <div class="card-body">
+        <h5 class="card-title">Interview</h5>
+        <p class="card-text">When interview will conduct you will get update through mail. JAM experts team will also help you in cracking the interview.</p>
+      </div>
+    </div>
+  </div>
+</div>
+    </div>
+</div>
+<h1 class="text-center m-5 textshadow">JAM Services for Employer<hr class="border border-warning border-2 opacity-50" align="center" /></h1>
+<div class="row p-0 mt-5" style="box-sizing: border-box; border-radius: 20px; background: linear-gradient(156deg, #90FFEE 4%, #F8FFC1 100%, #FFFFFF 100%);">
+    <div class="col-sm-7 p-4">
+        <h1 class="hAnimationClass">You need the best, we have the best
+</h1><br/>
+        <h4 class="homeText">Register Your Firm</h4>
+        <h4 class="homeText">Post Jobs</h4>
+        <h4 class="homeText">View Resume</h4>
+        <h4 class="homeText">Hire the best candidate!!!</h4>
+    </div>
+    <div class="col-sm-5 p-3" style="box-sizing: border-box;">
+        <img src="{% static 'images/cardimages/image2.jpg' %}" width="100%" class="shadow border border-3 border-secondary" style="border-radius: 5%;"/>
+    </div>
+</div>
+
+<div class="row p-0 mt-2 mb-5">
+    <div class="col-sm-12">
+       <div class="row row-cols-1 row-cols-md-3 g-4">
+    <div class="col">
+    <div class="card h-100 m-3 card2 border border-2 border-secondary ">
+      <img src="{% static 'images/cardimages/emp2.jpeg' %}" class="card-img-top" height="50%"/>
+      <div class="card-body">
+        <h5 class="card-title">Register on JAM</h5>
+        <p class="card-text">Register Your Company/Firm on JAM and Post Jobs or vacancies with requirements.
+                    You will have a lot of skilled candidates here.
+            <br/><br/>
+            <a href="{% url 'employerreg' %}">Click here to Register</a>
+        </p>
+      </div>
+    </div>
+  </div>
+  <div class="col">
+    <div class="card h-100 m-3 border border-2 border-secondary card2">
+      <img src="{% static 'images/cardimages/section4.jpg' %}" class="card-img-top" />
+      <div class="card-body">
+        <h5 class="card-title">Sort List</h5>
+        <p class="card-text">We will sortlist candidates Determine your criteria. Then you can shortlist them by having their resume.
+        </p>
+      </div>
+    </div>
+  </div>
+  <div class="col">
+    <div class="card h-100 m-3 border border-2 border-secondary card2">
+      <img src="{% static 'images/cardimages/emp1.jpg' %}" class="card-img-top"/>
+      <div class="card-body">
+        <h5 class="card-title">Final Interview</h5>
+        <p class="card-text">Conduct a Final Interview to select the best suited candidate, at your end. </p>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+</div>
+
+
+{% endblock add %}

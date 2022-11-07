@@ -1,0 +1,36 @@
+{% extends "empbase.html" %}
+
+{% block body %}
+
+    <h4 style="color: #2f2965; text-align: center;">
+        Applicant/Job Seeker Details
+    </h4>
+      <hr class="border border-secondary border-2 opacity-50" style="width: 70%; margin-left: 15%;">
+
+    <div style="width: 100%;">
+        <table class="table table-light table-hover" border="1" style="width: 80%; margin: 0 auto;">
+            <tr>
+                <th>Job Title</th>
+                <th>Post</th>
+                <th>Name</th>
+                <th>Qualification</th>
+                <th>Profile</th>
+            </tr>
+            <tbody class="table-group-divider">
+
+            {% for a in aj %}
+
+                <tr>
+                    <td>{{a.jobtitle}}</td>
+                    <td>{{a.post}}</td>
+                    <td>{{a.name}}</td>
+                    <td>{{a.qualification}}</td>
+                    <td><a href="{% url 'jsprofile' id=a.id %}" class="btn btn-warning">View</a></td>
+                </tr>
+
+            {% endfor %}
+            </tbody>
+        </table>
+    </div>
+
+{% endblock body %}

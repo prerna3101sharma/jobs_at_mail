@@ -1,0 +1,41 @@
+.nav-item
+{
+height: 40px;
+padding: 3px;
+margin-right: 5px;
+box-sizing: border-box;
+}
+.nav-item:hover
+{
+border-bottom: 3px solid #2f2965;
+border-radius: 5px;
+box-sizing: border-box;
+}
+.nav-item a
+{
+color: #2f2965;
+font-size: 18px;
+padding-top: 3px;
+}
+.nav-item a:hover
+{
+color: #2f2965;
+font-weight: bold;
+}
+.botborder
+{
+border: 1px solid grey;
+border-bottom: 3px solid grey;
+border-radius: 5px;
+}
+.left
+{
+
+ min-height: 500px;
+
+}
+.right
+{
+background-color: white;
+min-height: 500px;
+}

@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+<head>
+    <meta charset="UTF-8">
+    <title>Jobs At Mail</title>
+    <link href="{% static 'css/bootstrap.css' %}" rel="stylesheet" type="text/css"/>
+    <link href="{% static 'css/style.css' %}" rel="stylesheet" tyle="text/css"/>
+    <script src="{% static 'js/bootstrap.bundle.js' %}"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="{% static 'images/my jam images/jam_logo.png' %}" rel="icon"/>
+    <script type="text/javascript">
+        function show(){
+            document.getElementById("myPass").setAttribute("type", "text");
+        }
+
+        function hide(){
+            document.getElementById("myPass").setAttribute("type", "password");
+        }
+
+    </script>
+</head>
+<body>
+
+
+    <div class="container-fluid">
+        <!--Header start-->
+        <div class="row bg-dark text-light">
+            <div class="col-sm-4 text-center">
+                <i class="fa-solid fa-phone"> </i> Call Us : +91 94533187978
+            </div>
+            <div class="col-sm-4 text-center">
+                <i class="fa-solid fa-envelope"></i> Mail Us : jam1@gmail.com
+            </div>
+            <div class="col-sm-4 text-center">
+               <i class="fa-solid fa-location-dot"></i> Address : Sec-J, Jankipuram, Lucknow
+            </div>
+        </div>
+        <!--Header end-->
+        <!--Logo Row start-->
+        <div class="row mt-2">
+            <div class="col-sm-1 p-0 ps-2"></div>
+            <div class="col-sm-11 p-1 text-center">
+
+                <img src="{% static 'images/my jam images/JAM_logo.png' %}" width="6%" alt="Logo" title="Jobs At Mail"/>
+
+                <font class="fs-1" style="color: black; font-family: times new roman; font-size: 250px; text-width:200px;"><b  style="color:#036b90;">J</b>obs <b style="color:#036b90;">A</b>t <b style="color:#036b90;">M</b>ail <small class="fs-6 fw-bold" style="color: #036b90; font-family: times new roman;">(Jobs At Your Dootsteps)</small></font>
+
+            </div>
+        </div>
+        <!--Logo Row end-->
+
+        <!--Navbar start-->
+        <div class="row  mt-2 sticky-top">
+            <div class="col-sm-12 p-0" style="font-size: 110%;">
+
+ <div><nav class="navbar navbar-expand-lg" style="background-color: #036b90;">
+  <div class="container-fluid">
+    <a class="navbar-brand text-white" style="font-family: times new roman;" href="#">JAM</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link" aria-current="page" href="{% url 'index' %}"><i class="fa-solid fa-house"></i> Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="{% url 'about' %}"><i class="fa-solid fa-address-card"></i> About Us</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle text-white" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+           <i class="fa-solid fa-user-plus"></i> Registration
+          </a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item text-dark" href="{% url 'jobseekerreg' %}">Jobseeker Registration</a></li>
+            <li><a class="dropdown-item text-dark" href="{% url 'employerreg' %}">Employer Registration</a></li>
+          </ul>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="{% url 'login' %}"><i class="fa-solid fa-right-to-bracket"></i> Login</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="{% url 'contact' %}"><i class="fa-solid fa-phone"></i> Contact Us</a>
+        </li>
+      </ul>
+      <form class="d-flex" role="search">
+        <input class="form-control me-2" type="search"  placeholder="Search" aria-label="Search" style="border-radius: 4px 0px 0px 4px;">
+        <button class="btn btn-outline-light fw-bold" type="submit" style="border-radius: 0px 4px 4px 0px; margin-left: -2%;"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+  <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
+</svg></button>
+      </form>
+    </div>
+  </div>
+</nav>
+            </div>
+        </div>
+            </div>
+        <!--Navbar End-->
+
+        <!--Slider start-->
+        <div class="row mt-2">
+            <div class="col-sm-12 p-0">
+
+                <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+  <div class="carousel-indicators">
+    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-label="Slide 1"></button>
+    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3" aria-label="Slide 4"></button>
+    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="4" aria-label="Slide 5"></button>
+    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="5" aria-label="Slide 6"></button>
+
+  </div>
+  <div class="carousel-inner">
+    <div class="carousel-item active" data-interval="4000">
+      <img src="{% static 'images/my jam images/slide_3.png' %}" class="d-block w-100"/>
+    </div>
+    <div class="carousel-item" data-interval="4000">
+      <img src="{% static 'images/slider_3.png' %}" class="d-block w-100"/>
+    </div>
+    <div class="carousel-item" data-interval="4000">
+      <img src="{% static 'images/my jam images/temp1.jpg' %}" width="100%" class="d-block w-100"/>
+    </div>
+    <div class="carousel-item" data-interval="4000">
+      <img src="{% static 'images/slider_4.jpg' %}" class="d-block w-100"/>
+    </div>
+    <div class="carousel-item" data-interval="4000">
+      <img src="{% static 'images/My JAM images/slide_5.jpg' %}" class="d-block w-100"/>
+    </div>
+    <div class="carousel-item" data-interval="4000">
+      <img src="{% static 'images/My JAM images/slide_2.jpg' %}" class="d-block w-100"/>
+    </div>
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>
+
+            </div>
+        </div>
+        <!--Slider End-->
+
+        <!--Main Section Start-->
+        <div class="row mt-2" height="600px">
+            <div class="col-sm-4 shadow border border-2 border-warning p-2"  style="height: 550px; overflow: hidden; box-sizing: border-box;">
+                <div class="bg-warning text-light text-center">
+                    <h4 class="fw-bold" style="background: linear-gradient(to bottom right, black 20%, purple); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">Notice Board</h4>
+                </div>
+                <div class="bg-white text-left fs-5">
+                    <marquee direction="up" >
+                    <ul type="square">
+                    {% for n in nw %}
+
+                    <li  onmouseover="style.color='green'" onmouseout="style.color='black'">{{n.newstext}} <img src="{% static 'images/my jam images/new.gif'%}" width="10%"/> </li>
+
+                    {% endfor %}
+                    </ul>
+                    </marquee>
+                </div>
+            </div>
+            <div class="col-sm-8 p-0" style="box-sizing: border-box;">
+               {% block body %}
+
+               {% endblock body %}
+            </div>
+        </div>
+        <div class="row m-3"  style="box-sizing: border-box;">
+            <div class="col-sm-12 p-0" style="box-sizing: border-box;">
+            {% block add %}
+
+            {% endblock add %}
+             </div>
+        </div>
+        <!--Main Section End-->
+
+
+        <!--Footer start-->
+        <div class="row bg-dark py-4 mt-2 " >
+            <div class="col-sm-3 mt-4 text-light text-center pt-3">
+                <img src="{% static 'images/my jam images/JAM_logo.png' %}"  width="25%"/>
+                <h3 style="font-family: times new roman">Jobs At Mail</h3><br/>
+            </div>
+            <div class="col-sm-2 text-light">
+                <b>Useful Links</b>
+                <hr style="width:50%;text-align:left;margin-left:0; height: 5px;" color="yellow">
+                <ul class="list-unstyled">
+                    <li><i class="fa-solid fa-building-columns"></i> <a href="{% url 'index' %}" class="link">Home</a></li>
+                    <li><i class="fa-solid fa-book"></i> <a href="{% url 'about' %}" class="link">About JAM</a></li>
+                    <li><i class="fa-solid fa-address-card"></i> <a href="#" class="link">Portfolio</a></li>
+                    <li><i class="fa-solid fa-user-doctor"></i> <a href="#" class="link">Jobs</a></li>
+                    <li><i class="fa-solid fa-building"></i> <a href="#" class="link">Companies</a></li>
+                </ul>
+            </div>
+
+            <div class="col-sm-2 text-light">
+                <b>Other Links</b>
+                <hr style="width:50%;text-align:left;margin-left:0; height: 5px;" color="yellow">
+                <ul class="list-unstyled">
+                    <li><i class="fa-solid fa-circle-question"></i> <a href="#" class="link">Help Center</a></li>
+                    <li><i class="fa-brands fa-google"></i> <a href="https://www.google.com" target="_blank" class="link">Google</a></li>
+                    <li><i class="fa-solid fa-circle-exclamation"></i> <a href="#" class="link">Notices</a></li>
+                    <li><i class="fa-brands fa-hornbill"></i> <a href="#" class="link">Grievances</a></li>
+                    <li><i class="fa-solid fa-flag-checkered"></i> <a href="#" class="link">Report Issue</a></li>
+                </ul>
+
+            </div>
+
+            <div class="col-sm-5">
+                <!--Map start-->
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3557.3594551029364!2d80.96201531379462!3d26.923816766096188!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x399957cc00000043%3A0xe946d5cb9b782188!2sSoftpro%20India%20Computer%20Technologies%20Pvt%20Ltd!5e0!3m2!1sen!2sin!4v1661934989465!5m2!1sen!2sin" width="100%" height="100%" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                <!--Map End-->
+            </div>
+        </div>
+        <!--Footer end-->
+
+    </div>
+
+
+
+
+</body>
+</html>

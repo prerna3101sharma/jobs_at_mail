@@ -1,0 +1,58 @@
+{% extends "jobbase.html" %}
+{% load static %}
+
+{% block body %}
+
+    <h4 style="color: #2f2965; text-align: center; padding-top: 3%;">
+        Job's List For You
+    </h4>
+      <hr class="border border-secondary border-2 opacity-50" style="width: 70%; margin-left: 15%;">
+
+<div style="width: 100%; padding-left: 3%;">
+        {% for j in jb %}
+    <table class="table shadow table-striped" style="margin: 0 auto; width: 80%; border: 1px solid gray;">
+        <tr>
+            <th>Firm Name:-</th>
+            <td>{{j.firmname}}</td>
+        </tr>
+        <tr>
+            <th>Job Title:-</th>
+            <td>{{j.jobtitle}}</td>
+        </tr>
+        <tr>
+            <th>Post:-</th>
+            <td>{{j.post}}</td>
+        </tr>
+        <tr>
+            <th>Description:-</th>
+            <td>{{j.jobdesc}}</td>
+        </tr>
+        <tr>
+            <th>Qualification:-</th>
+            <td>{{j.qualification}}</td>
+        </tr>
+        <tr>
+            <th>Experience:-</th>
+            <td>{{j.experience}}</td>
+        </tr>
+        <tr>
+            <th>Location:-</th>
+            <td>{{j.location}}</td>
+        </tr>
+        <tr>
+            <th>Package:-</th>
+            <td>{{j.salarypa}}</td>
+        </tr>
+        <tr>
+            <td>&nbsp;</td>
+            <td>
+                <a href="{% url 'appliedjobs' id=j.id %}" class="btn btn-warning">Apply</a>
+            </td><br/>
+        </tr>
+    </table><br/>
+        {% endfor %}
+
+</div>
+
+{% endblock body %}
+

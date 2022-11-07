@@ -1,0 +1,90 @@
+{% extends "base.html" %}
+{% load static %}
+{% block body %}
+<div class="row mt-0 m-3">
+  <div class="col-sm-12" style="box-sizing: border-box;">
+
+   <div class="ms-2 me-2 pt-3 border border-2 border-info" style="border-radius: 5px; box-sizing: border-box; box-shadow: 5px 5px 3px skyblue;">
+<h4 style="text-align: center; color: #036b90;">
+    Enquiry/Feedback Form
+    <hr class="border border-warning border-2 opacity-50" style="width: 70%; margin-left: 15%;">
+
+</h4>
+{% if msg %}
+        <div class="alert alert-success" style="width: 80%; margin: 3% auto; text-align: center;">{{msg}}</div>
+{% endif %}
+<div style="width: 60%; margin: 0 auto; font-weight: bold;">
+<form action="{% url 'saveenq' %}" method="post">
+    {% csrf_token %}
+  <div class="form-group">
+    <label>Enter Your Name</label>
+    <input type="text" name="name" class="botborder form-control m-1" required="true"/>
+  </div>
+  <div class="form-group fw-normal">
+    <label class="fw-bold">Select Your Gender</label>
+    <br/>&nbsp;&nbsp;
+    <input type="radio" name="gender" value="Male"/> Male&nbsp;
+    <input type="radio" name="gender" value="Female" /> Female
+  </div>
+  <div class="form-group">
+    <label>Enter Your Address</label>
+    <textarea name="address" class="form-control botborder"></textarea>
+  </div>
+  <div class="form-group">
+    <label>Enter Contact No</label>
+    <input type="number" name="contactno" class="form-control botborder" required="true"/>
+  </div>
+  <div class="form-group">
+    <label>Enter Email Address</label>
+    <input type="email" name="emailaddress" class="form-control botborder" required="true"/>
+  </div>
+  <div class="form-group">
+    <label>Enter Enquiry Text</label>
+    <textarea name="enquirytext" class="form-control botborder" required="true"></textarea>
+  </div>
+    <br/>
+  <div class="form-group" style="margin-left: 35%;">
+    <input type="submit" value="Submit" class="btn btn-warning"/>
+    &nbsp;
+    <input type="reset" value="Reset" class="btn btn-info"/>
+  </div>
+</form>
+    <br/>
+</div>
+   </div>
+</div>
+</div>
+{% endblock body %}
+
+{% block add %}
+<br/>
+    <hr class="border border-warning border-2 opacity-50"><br/>
+<div class="row">
+  <div class="col-sm-4 text-center">
+    <h4><i class="fa-solid fa-phone text-warning"></i> Contact Us:</h4>
+    <p>+91-9878554214 <br/> +91-9878554005</p>
+    <div class="row" style="margin-bottom: -10rem;">
+  <div class="col-sm-12 text-center">
+
+    <a href="#"><i class="fa-brands fa-facebook fa-2xl" style="color: #1877f2;"></i></a>
+    <a href="#"><i class="fa-brands fa-linkedin fa-2xl" style="color:#0077b5;"></i></a>
+    <a href="#"><i class="fa-brands fa-youtube text-danger fa-2xl"></i></a>
+    <a href="#"><i class="fa-brands fa-twitter fa-2xl" style="color: #02a9ed;"></i></a>
+
+  </div>
+</div>
+  </div>
+  <div class="col-sm-4 text-center">
+    <h4><i class="fa-solid fa-location-dot text-warning"></i> Address: </h4>
+    <p>Softpro Tower <br/>Near New Hanuman Temple <br/> Kapoorthala, Aliganj -226006 <br/>Lucknow (UP)</p>
+  </div>
+  <div class="col-sm-4 text-center">
+    <h4><i class="fa-solid fa-envelope text-warning"></i> Email Address: </h4>
+    <p>jaminfo@gmail.com</p>
+    <p>infojam@gmail.org</p><br/>
+  </div>
+
+</div>
+<br/>
+
+{% endblock add %}

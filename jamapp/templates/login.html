@@ -1,0 +1,59 @@
+{% extends "base.html" %}
+{% block body %}
+<div class="container-fluid">
+<div class="row fw-bold mt-5" style=" box-sizing: border-box;">
+  <div class="col-sm-12" style="box-sizing: border-box;">
+
+   <div class="ms-5 me-5  pt-3 border border-4 border-info" style="border-radius: 5px; box-sizing: border-box; box-shadow: 10px 10px 5px lightblue;">
+<h4 style="color: #036b90;  text-align: center; padding-top: 5px;">
+        Login Form
+    </h4>
+       <hr class="border border-warning border-2 opacity-50" style="width: 70%; margin-left: 15%;">
+    {% if msg %}
+    <div class="alert alert-danger" style="width: 70%; margin: 2% auto; text-align: center;">{{msg}}</div>
+    {% endif %}
+
+       <div style="width: 60%; margin: 0 auto;">
+        <form action="{% url 'validate' %}" method="post">
+            {% csrf_token %}
+            <div class="form-group">
+                <label>Enter User ID</label>
+                <input type="text" name="userid" required="true" class="botborder form-control"/>
+            </div>
+            <div class="form-group">
+                <label>Enter Password</label>
+                <div class="row">
+                    <div class="col-sm-12" >
+                <input type="password" name="password" id="myPass" required="true" class=" botborder form-control" style="width: 100%;"/>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group">
+                <label>Select User Type</label>
+                <select name="usertype" class="botborder form-control">
+                    <option value="">-Select-</option>
+                    <option value="jobseeker">Job Seeker</option>
+                    <option value="employer">Employer</option>
+                    <option value="admin">Admininstrator</option>
+                </select>
+            </div><br/>
+            <div class="form-group" style="padding-left: 30%">
+                <input type="submit" value="Login" class="btn btn-warning"/>
+                &nbsp;
+                <input type="reset" value="Reset" class="btn btn-info"/>
+            </div>
+
+
+
+
+
+
+
+        </form><br/>
+           </div>
+    </div>
+</div>
+</div>
+</div>
+
+{% endblock body %}

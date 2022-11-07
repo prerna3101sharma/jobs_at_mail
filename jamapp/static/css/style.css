@@ -1,0 +1,159 @@
+.link
+{
+text-decoration: none;
+color: white;
+}
+.link:hover
+{
+color: yellow;
+}
+.btn:hover
+{
+background-color: warning;
+color: black;
+}
+.textshadow
+{
+color: #036b90;
+text-shadow: 2px 2px 2px yellow;
+font-weight: bold;
+}
+.notice li a
+{
+text-decoration: none;
+color: black;
+}
+.notice li a:hover
+{
+text-decoration: none;
+color: blue;
+}
+.nav-item
+{
+height: 50px;
+padding: 2px;
+}
+.nav-item:hover
+{
+border-bottom: 3px solid white;
+border-radius: 5px;
+box-sizing: border-box;
+}
+.nav-item a
+{
+color: white;
+}
+.nav-item a:hover
+{
+color: white;
+font-weight: bold;
+}
+.card1
+{
+border: 3px solid skyblue;
+}
+.card1:hover
+{
+/*width: 95%;*/
+animation: card1 1s ease 0s 1 normal forwards;
+}
+@keyframes card1 {
+	0% {
+		transform: scale(1);
+	}
+
+	100% {
+		transform: scale(1.1);
+	}
+}
+
+.card2:hover
+{
+animation: card2 1s ease 0s 1 normal forwards;
+box-shadow: 3px 3px 5px grey;
+}
+@keyframes card2 {
+	0% {
+		transform: scale(1);
+	}
+
+	100% {
+		transform: scale(1.02);
+	}
+}
+.botborder
+{
+border: 1px solid grey;
+border-bottom: 3px solid grey;
+border-radius: 5px;
+}
+.hAnimationClass
+{
+animation: textAni 3s ease 0s 1 normal forwards;
+}
+.homeText
+{
+animation: textAni 5s ease 0s 1 normal forwards;
+}
+@keyframes textAni {
+	0% {
+		opacity: 0;
+		transform: translateX(250px);
+	}
+
+	100% {
+		opacity: 1;
+		transform: translateX(0);
+	}
+}
+
+/* ABOUT page Animation */
+
+.aboutDiv1
+{
+animation: aboutDiv1 6s ease 0s 1 normal forwards;
+}
+
+@keyframes aboutDiv1 {
+	0% {
+		opacity: 0;
+		transform: translateX(-250px);
+	}
+
+	100% {
+		opacity: 1;
+		transform: translateX(0);
+	}
+}
+.aboutDiv2
+{
+animation: aboutDiv2 6s ease 0s 1 normal forwards;
+}
+
+@keyframes aboutDiv2 {
+	0% {
+		opacity: 0;
+		transform: translateX(250px);
+	}
+
+	100% {
+		opacity: 1;
+		transform: translateX(0);
+	}
+}
+
+.fb:hover
+{
+transform: scale(1.5, 1.5);
+}
+.borderani
+{
+height: 100%;
+width: 100%;
+position: relative;
+border: 8px groove #036b90;
+box-shadow: 5px 5px 5px #98e6e6;
+border-radius: 8px;
+box-sizing:border-box;
+}
+

@@ -1,0 +1,72 @@
+{% extends "base.html" %}
+{% block body %}
+<div class="container-fluid">
+<div class="row" style=" box-sizing: border-box;">
+  <div class="col-sm-12" style="box-sizing: border-box;">
+
+   <div class=" ms-2 me-2 m-1 pt-3 border border-4 border-info" style="border-radius: 5px; box-sizing: border-box; box-shadow: 7px 7px 5px lightblue;">
+<h4 style="color: #036b90;  text-align: center; padding: 5px 0px;">
+        Company/Employer Registration Form
+    </h4>
+       <hr class="border border-warning border-2 opacity-50" style="width: 70%; margin-left: 15%;">
+
+    {% if msg %}
+    <div class="alert alert-success" style="width: 80%; margin: 3% auto; text-align: center;">{{msg}}</div>
+    {% endif %}
+    <div style="width: 60%; margin: 0 auto;" class="fw-bold">
+        <form action="{% url 'ereg' %}" method="post">
+            {% csrf_token %}
+            <div class="form-group">
+                <label>Enter Firm/Company Name</label>
+                <input type="text" name="firmname" class="botborder form-control" required="true"/>
+            </div>
+            <div class="form-group">
+                <label>Enter Nature Of Work</label>
+                <textarea name="firmwork" class="botborder form-control"></textarea>
+            </div>
+            <div class="form-group">
+                <label>Enter Firm Address</label>
+                <textarea name="firmaddress" class="botborder form-control"></textarea>
+            </div>
+            <div class="form-group">
+                <label>Enter Contact Person Name</label>
+                <input type="text" name="cpname" class="botborder form-control" required="true"/>
+            </div>
+            <div class="form-group">
+                <label>Enter Contact Person Contact No.</label>
+                <input type="number" name="cpcontactno" class="botborder form-control" required="true"/>
+            </div>
+            <div class="form-group">
+                <label>Enter Contact Person Email Address</label>
+                <input type="email" name="cpemailaddress" class="botborder form-control" required="true"/>
+            </div>
+            <div class="form-group">
+                <label>Enter Aadhar No.</label>
+                <input type="number" name="aadharno" class="botborder form-control" required="true"/>
+            </div>
+            <div class="form-group">
+                <label>Enter PAN No.</label>
+                <input type="text" name="panno" class="botborder form-control" required="true"/>
+            </div>
+            <div class="form-group">
+                <label>Enter GST No.</label>
+                <input type="text" name="gstno" class="botborder form-control" required="true"/>
+            </div>
+            <div class="form-group">
+                <label>Enter Password</label>
+                <input type="password" name="password" required="true" class=" botborder form-control" style="width: 100%;"/>
+            </div>
+            <br/>
+            <div class="form-group" style="padding-left: 30%;">
+                <input type="submit" value="Register" class="btn btn-warning"/>
+                &nbsp;
+                <input type="reset" value="Reset" class="btn btn-info"/>
+            </div>
+                <br/>
+        </form>
+    </div>
+   </div>
+  </div>
+</div>
+</div>
+{% endblock body %}
